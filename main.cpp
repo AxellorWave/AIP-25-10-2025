@@ -1,6 +1,10 @@
 #include <iostream>
+#include <limits>
 
 bool isPyth(unsigned a, unsigned b, unsigned c);
+bool isOverSum(unsigned a, unsigned b);
+bool isOverMultiply(unsigned a, unsigned b);
+
 int main()
 {
   using u_t = unsigned;
@@ -27,4 +31,17 @@ bool isPyth(unsigned a, unsigned b, unsigned c)
   d = d || (b*b == (a*a + c*c));
   d = d || (c*c == (a*a + b*b));
   return d;
+}
+
+bool isOverSum(unsigned a, unsigned b)
+{
+  unsigned max = std::numeric_limits<unsigned>::max();
+  return (max - a < b);
+}
+
+
+bool isOverMultiply(unsigned a, unsigned b)
+{
+  unsigned max = std::numeric_limits<unsigned>::max();
+  return (max / a < b);
 }
