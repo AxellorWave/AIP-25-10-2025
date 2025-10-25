@@ -1,7 +1,6 @@
 #include <iostream>
 
 bool isPyth(unsigned a, unsigned b, unsigned c);
-
 int main()
 {
   using u_t = unsigned;
