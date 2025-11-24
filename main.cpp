@@ -10,6 +10,7 @@ unsigned min(unsigned a, unsigned b);
 int main()
 {
   using u_t = unsigned;
+  
   u_t a = 0, b, c;
   size_t count = 0;
   std::cin >> b >> c;
